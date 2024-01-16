@@ -1,0 +1,5 @@
+{
+  "**/*.{json,md,yaml,yml,html,css}": ["prettier --write --ignore-unknown"],
+  "**/*.{js,jsx}": ["prettier --write --ignore-unknown", "eslint --fix"],
+  "**/*.{cds}": ["prettier --write --ignore-unknown", "cds lint"]
+}

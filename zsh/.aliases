@@ -1,0 +1,57 @@
+# easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias l="ls -lah ${colorflag}"
+alias la="ls -AF ${colorflag}"
+alias ll="ls -laFh ${colorflag}"
+alias ld="ls -l | grep ^d"
+
+if command -v exa &>/dev/null; then
+    alias l="exa -G --group-directories-first"
+    alias la="l -a"
+    alias ll="exa -al --group-directories-first"
+    alias ld="l -D"
+    alias lt="exa -a --tree --level=2 --git-ignore"
+    alias ltt="exa -a --tree --level=3 --git-ignore"
+    alias lttt="exa -a --tree --level=4 --git-ignore"
+fi
+
+# List file and dir names vertically.
+alias l1='ls -1 -F'
+
+# Zip & Unzip
+alias tarz='tar czvf'
+alias taru='tar xzvf'
+
+# additional information when losing files
+alias rm='rm -i'
+alias rmf='rm -rfi'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# PS
+alias psa="ps aux"
+
+# macOS aliasses
+if [[ $OSTYPE == darwin* ]]; then
+    alias flush='dscacheutil -flushcache'
+fi
+
+# edit and reload dotfiles
+alias ec="code $DOTFILES"
+alias sc="source $ZSH/.zshrc"
+
+# node
+export NODE_PATH="/usr/local/lib/node_modules"
+
+alias ni='npm install'
+alias nid='npm install --save-dev'
+alias nu='npm uninstall'
+alias nud='npm uninstall --save-dev'
+alias nou='npm outdated'
+alias nup='npm update'
+alias nr='npm run'
+alias nls='npm list'

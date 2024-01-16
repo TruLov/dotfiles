@@ -1,0 +1,12 @@
+/*
+
+!.gitignore
+!README.md
+!font_test.sh
+
+!git/
+!zsh/
+!wezterm/
+!cap/
+!starship/
+!nvim/

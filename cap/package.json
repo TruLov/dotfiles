@@ -1,0 +1,13 @@
+{
+  "description": "Sample Scripts for a standardized CAP application.",
+  "scripts": {
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "build:dts": "npx @cap-js/cds-typer '*' --outputDirectory @cds-models --logLevel TRACE",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "dev": "cds-ts watch",
+    "format": "prettier --write --ignore-unknown .",
+    "lint": "eslint --fix . --ext .js",
+    "start": "cds run",
+    "undeploy": "cf undeploy undefined --delete-services --delete-service-keys --delete-service-brokers"
+  }
+}
