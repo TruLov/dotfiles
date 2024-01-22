@@ -27,8 +27,8 @@ config.window_padding = {
   bottom = 0,
 }
 
---config.window_background_opacity = 0.9
---config.macos_window_background_blur = 20
+config.window_background_opacity = 0.925
+config.macos_window_background_blur = 25
 
 config.harfbuzz_features = {
     'calt=0',

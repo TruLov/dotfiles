@@ -1,12 +1,12 @@
 [user]
-	email = truloff@gambit.de
+	email = 23336472+TruLov@users.noreply.github.com
 	name = Ruloff Tom
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    required = true
+    clean = git-lfs clean -- %f
 [http]
-	cookiefile = /Users/tomruloff/.gitcookies
+	cookiefile = $HOME/.gitcookies
 [core]
-	excludesfile = /Users/tomruloff/.dotfiles/git/.gitignore_global
+	excludesfile = $HOME/.config/git/.gitignore_global
