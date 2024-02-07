@@ -10,3 +10,9 @@
 	cookiefile = $HOME/.gitcookies
 [core]
 	excludesfile = $HOME/.config/git/.gitignore_global
+[alias]
+	unstage = reset HEAD --
+	co = checkout
+	b = branch
+	c = commit
+	st = status
