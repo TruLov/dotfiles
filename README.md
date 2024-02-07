@@ -38,6 +38,13 @@ brew install --cask wezterm
 ln -s ~/.config/wezterm/.wezterm.lua ~/.wezterm.lua
 ```
 
+## alacritty
+
+```bash
+# defaults write -g AppleFontSmoothing -int 0
+defaults write org.alacritty AppleFontSmoothing -int 0
+```
+
 ## nvim
 
 [typecraft - Neovim for Newbs](<https://www.youtube.com/watch?v=zHTeCSVAFNY&list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn&pp=iAQB>)
@@ -49,4 +56,17 @@ brew tap homebrew/cask-fonts
 brew search font- | grep fira
 brew install --cask font-fira-code-nerd-font
 brew install --cask font-symbols-only-nerd-font
+```
+
+## Eclipse + ADTs
+
+```bash
+brew upgrade --cask eclipse-ide
+
+# <https://me.sap.com/notes/2971147/E>
+# <https://gluonhq.com/products/javafx/>
+mv ~/Downloads/javafx-sdk-21.0.2/ ~/lib
+
+# .zshenv PATH_TO_FX anpassen
+# /Applications/Eclipse.app/Contents/Eclipse/eclipse.ini anpassen
 ```
