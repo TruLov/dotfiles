@@ -12,7 +12,7 @@ $directory\
 
 right_format = """
 $character\
-[](bg:base fg:subtext1)\
+[](fg:subtext1)\
 $git_branch\
 $git_status\
 [](bg:subtext1 fg:overlay1)\
