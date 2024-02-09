@@ -55,3 +55,7 @@ alias nou='npm outdated'
 alias nup='npm update'
 alias nr='npm run'
 alias nls='npm list'
+
+alias gg='lazygit'
+alias zz='zellij'
+
