@@ -192,20 +192,27 @@ plugins {
     session-manager { path "session-manager"; }
 }
 
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
 // eg. when terminal window with an active zellij session is closed
 // Options:
 //   - detach (Default)
 //   - quit
 //
-// on_force_close "quit"
+// on_force_close "detach"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
 //  Options:
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+// simplified_ui false
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -340,7 +347,7 @@ theme "catppuccin-mocha" // or latte, frappe and macchiato
 
 // The folder in which Zellij will look for layouts
 //
-// layout_dir "/path/to/my/layout_dir"
+layout_dir "$HOME/.config/zellij/layouts"
 
 // The folder in which Zellij will look for themes
 //
