@@ -1,12 +1,12 @@
 return {
-	"kdheepak/lazygit.nvim",
-	config = function()
-		require("lazy").setup({
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-			},
-		})
 
-		vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", {})
-	end,
+    "kdheepak/lazygit.nvim",
+
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+
+    config = function()
+        vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", {})
+    end,
 }
