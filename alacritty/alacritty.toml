@@ -23,6 +23,10 @@ option_as_alt = "OnlyLeft" # other values are None, OnlyRight, Both
 opacity = 0.9
 blur = true
 
+[shell]
+program = "/bin/zsh"
+args = ["-l","-c","zellij attach --index 0 || zellij"]
+
 [colors.primary]
 background = "#1E1E2E"
 foreground = "#CDD6F4"
