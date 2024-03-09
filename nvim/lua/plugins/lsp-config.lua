@@ -16,6 +16,7 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "tsserver",
+                    "pyright",
                 },
             })
         end,
@@ -28,16 +29,22 @@ return {
 
             lspconfig.lua_ls.setup({})
             lspconfig.tsserver.setup({})
+            lspconfig.pyright.setup({})
 
-            vim.api.nvim_create_autocmd({"BufEnter","BufWinEnter"}, {
-                pattern = {"*.cds"},
+            vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+                pattern = { "*.cds" },
                 callback = function()
                     local client = vim.lsp.start({
                         name = "cds_lsp",
-                        -- autostart = true,
                         cmd = { "cds-lsp", "--stdio" },
                         root_dir = "/usr/local/bin/cds-lsp",
+                        init_options = { provideFormatter = true },
+                        -- autostart = true,
                         -- filetypes = { "cds" },
+                        single_file_support = true,
+                        settings = {
+                            cds = { validate = true },
+                        },
                     })
                     vim.lsp.buf_attach_client(0, client)
                 end,
