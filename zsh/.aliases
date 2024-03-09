@@ -22,6 +22,8 @@ fi
 # List file and dir names vertically.
 alias l1='ls -1 -F'
 
+alias tree='exa --tree'
+
 # Zip & Unzip
 alias tarz='tar czvf'
 alias taru='tar xzvf'
