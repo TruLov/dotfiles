@@ -8,13 +8,13 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "outDir": "./gen/srv/srv",
+    "outDir": "./gen/srv",
     "noErrorTruncation": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "NodeNext",
     "paths": {
       "#cds-models/*": ["./@cds-models/*/index.ts"]
     }
   },
   "include": ["srv"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "app"]
 }

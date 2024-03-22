@@ -1,0 +1,8 @@
+build-parameters:
+    before-all:
+        - builder: custom
+          commands:
+              - npx cds build --production
+              - tsc
+              - npx rimraf --glob gen/db/**/@cds-models
+              - npx rimraf --glob gen/srv/**/*.ts

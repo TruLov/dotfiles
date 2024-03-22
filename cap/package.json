@@ -1,13 +1,28 @@
 {
-  "description": "Sample Scripts for a standardized CAP application.",
-  "scripts": {
-    "build": "rimraf resources mta_archives && mbt build --mtar archive",
-    "build:dts": "npx @cap-js/cds-typer '*' --outputDirectory @cds-models --logLevel TRACE",
-    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
-    "dev": "cds-ts watch",
-    "format": "prettier --write --ignore-unknown .",
-    "lint": "eslint --fix . --ext .js",
-    "start": "cds run",
-    "undeploy": "cf undeploy undefined --delete-services --delete-service-keys --delete-service-brokers"
-  }
+    "description": "Sample Scripts for a standardized CAP application.",
+    "dependencies": {
+        "@sap-cloud-sdk/http-client": "^3.11.0",
+        "@sap-cloud-sdk/resilience": "^3.11.0"
+    },
+    "devDependencies": {
+        "@cap-js/cds-typer": "^0",
+        "@sap/eslint-plugin-cds": "^2.6.5",
+        "@typescript-eslint/eslint-plugin": "^7.0.1",
+        "@typescript-eslint/parser": "^7.0.1",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    },
+    "scripts": {
+        "build": "rimraf resources mta_archives && mbt build --mtar archive",
+        "build:dts": "npx @cap-js/cds-typer '*' --outputDirectory @cds-models --logLevel TRACE",
+        "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+        "dev": "cds-ts watch",
+        "format": "prettier --write --ignore-unknown .",
+        "lint": "eslint --fix . --ext .js",
+        "start": "cds run",
+        "undeploy": "cf undeploy undefined --delete-services --delete-service-keys --delete-service-brokers"
+    }
 }

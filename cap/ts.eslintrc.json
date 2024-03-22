@@ -1,0 +1,39 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@sap/cds/recommended",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "env": {
+        "es2022": true,
+        "node": true,
+        "jest": true,
+        "mocha": true
+    },
+    "globals": {
+        "SELECT": true,
+        "INSERT": true,
+        "UPSERT": true,
+        "UPDATE": true,
+        "DELETE": true,
+        "CREATE": true,
+        "DROP": true,
+        "CDL": true,
+        "CQL": true,
+        "CXL": true,
+        "cds": true
+    },
+    "rules": {
+        "no-console": "off",
+        "require-atomic-updates": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "warn"
+    }
+}
