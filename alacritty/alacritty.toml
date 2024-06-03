@@ -17,10 +17,16 @@ style = "Italic"
 family = "FiraCode Nerd Font"
 style = "Regular"
 
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]
+
 [window]
 # for zelli to work with alt key
 option_as_alt = "OnlyLeft" # other values are None, OnlyRight, Both
-opacity = 0.9
+opacity = 0.94
 blur = true
 
 [shell]
