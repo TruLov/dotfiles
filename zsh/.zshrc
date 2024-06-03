@@ -7,3 +7,5 @@ source $ZSH/bindings.zsh
 
 eval "$(starship init zsh)"
 # eval "$(zellij setup --generate-auto-start zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
