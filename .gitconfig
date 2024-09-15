@@ -1,0 +1,9 @@
+[user]
+	email = 23336472+TruLov@users.noreply.github.com
+	name = Tom Ruloff
+
+[pull]
+	ff = only
+
+[commit]
+	verbose = true
