@@ -1,0 +1,64 @@
+# dotfiles bare repo
+alias config="/usr/bin/git --git-dir=$CFG --work-tree=$HOME"
+alias ggc="lazygit --git-dir=$CFG --work-tree=$HOME"
+alias ec="code $CFG"
+alias sc="source $HOME/.zshrc"
+
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# better ls
+alias l="ls -lah ${colorflag}"
+alias la="ls -AF ${colorflag}"
+alias ll="ls -laFh ${colorflag}"
+alias ld="ls -l | grep ^d"
+
+if command -v eza &>/dev/null; then
+    alias l="eza -G --group-directories-first"
+    alias la="l -a"
+    alias ll="eza -al --group-directories-first"
+    alias ld="l -D"
+    alias lt="eza -a --tree --level=2 --git-ignore"
+    alias ltt="eza -a --tree --level=3 --git-ignore"
+    alias lttt="eza -a --tree --level=4 --git-ignore"
+fi
+
+# List file and dir names vertically.
+alias l1="ls -1 -F"
+
+alias tree="eza --tree"
+
+# Zip & Unzip
+alias tarz="tar czvf"
+alias taru="tar xzvf"
+
+# additional information when losing files
+alias rm="rm -i"
+alias rmf="rm -rfi"
+alias cp="cp -i"
+alias mv="mv -i"
+
+# PS
+alias psa="ps aux"
+
+# macOS aliasses
+if [[ $OSTYPE == darwin* ]]; then
+    alias flush="dscacheutil -flushcache"
+fi
+
+# npm
+alias ni="npm install"
+alias nid="npm install --save-dev"
+alias nu="npm uninstall"
+alias nud="npm uninstall --save-dev"
+alias nou="npm outdated"
+alias nup="npm update"
+alias nr="npm run"
+alias nls="npm list"
+
+# tools
+alias gg="lazygit"
+alias zz="zellij"
